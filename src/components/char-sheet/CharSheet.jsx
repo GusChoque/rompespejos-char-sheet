@@ -1,8 +1,10 @@
+import "./char-sheet.css"
+import LinedTitle from "../LinedTitle";
 function CharSheet() {
   return (
-    <form className="border-4">
-      <h1 className="text-center text-3xl font-bold">Rompespejos</h1>
-      <section className="p-4 grid grid-cols-3 gap-4 border-t-4">
+    <form className="print:border-4">
+      <LinedTitle text="Rompespejos" Tag="h1" />
+      <section className="p-4 grid grid-cols-3 gap-4">
         <ul className="flex flex-col gap-2">
           <li className="flex justify-between gap-2">
             <span>Nombre:</span>
@@ -19,7 +21,9 @@ function CharSheet() {
           <li className="flex justify-between gap-2">
             <span>Sexo:</span>
             <select type="select" name="sexo" className="w-7/12 px-2">
-              <option disabled selected value> -- Selecciona --
+              <option disabled selected value>
+                {" "}
+                -- Selecciona --
               </option>
               <option value="1">Masculino</option>
               <option value="2">Femenino</option>
@@ -30,7 +34,9 @@ function CharSheet() {
           <li className="flex justify-between gap-2">
             <span>Signo:</span>
             <select type="select" name="sexo" className="w-7/12 px-2">
-              <option disabled selected value> -- Selecciona --
+              <option disabled selected value>
+                {" "}
+                -- Selecciona --
               </option>
               <option value="1">Acuario</option>
               <option value="2">Piscis</option>
@@ -52,7 +58,9 @@ function CharSheet() {
           <li className="flex justify-between gap-2">
             <span>Especie:</span>
             <select type="select" name="sexo" className="w-7/12 px-2">
-              <option disabled selected value> -- Selecciona --
+              <option disabled selected value>
+                {" "}
+                -- Selecciona --
               </option>
               <option value="1">Humano</option>
               <option value="2">Elfo</option>
@@ -67,7 +75,9 @@ function CharSheet() {
           <li className="flex justify-between gap-2">
             <span>Cultura:</span>
             <select type="select" name="sexo" className="w-7/12 px-2">
-              <option disabled selected value> -- Selecciona --
+              <option disabled selected value>
+                {" "}
+                -- Selecciona --
               </option>
               <option value="1">Aborígenes</option>
               <option value="2">Magnarios</option>
@@ -82,7 +92,9 @@ function CharSheet() {
           <li className="flex justify-between gap-2">
             <span>Clase:</span>
             <select type="select" name="sexo" className="w-7/12 px-2">
-              <option disabled selected value> -- Selecciona --
+              <option disabled selected value>
+                {" "}
+                -- Selecciona --
               </option>
               <option value="1">Asesino</option>
               <option value="2">Bárbaro</option>
@@ -111,7 +123,9 @@ function CharSheet() {
           <li className="flex justify-between gap-2">
             <span>Trasfondo:</span>
             <select type="select" name="sexo" className="w-7/12 px-2">
-              <option disabled selected value> -- Selecciona --
+              <option disabled selected value>
+                {" "}
+                -- Selecciona --
               </option>
               <option value="1">Académico</option>
               <option value="2">Acólito</option>
@@ -138,7 +152,9 @@ function CharSheet() {
           <li className="flex justify-between gap-2">
             <span>Alineamiento:</span>
             <select type="select" name="sexo" className="w-7/12 px-2">
-              <option disabled selected value> -- Selecciona --
+              <option disabled selected value>
+                {" "}
+                -- Selecciona --
               </option>
               <option value="1">Legal Bueno</option>
               <option value="2">Neutral Bueno</option>
@@ -177,14 +193,20 @@ function CharSheet() {
       </section>
       <section className="flex">
         <div className="grid grid-rows-2 w-1/3">
-          <fieldset className="border-t-4">
-            <legend className="m-auto px-2 text-3xl font-bold">
-              Atributos
-            </legend>
+          <fieldset className="">
+          <LinedTitle text="Atributos" Tag="h1" />
+
+            <div className="print:hidden print:">
+              Esto no se imprime
+              </div>
+            <div className="hidden print:block">
+              Esto si se imprime
+            </div>
           </fieldset>
-          <fieldset className="border-t-4">
-            <legend className="m-auto px-2 text-3xl font-bold">Salud</legend>
-            <p>algo</p>
+          <fieldset className="">
+          <LinedTitle text="Salud" Tag="h3" />
+
+
           </fieldset>
           <div className="flex">
             <h4 className="salvacion-de-muerte">Salvacion de muerte</h4>
@@ -194,10 +216,9 @@ function CharSheet() {
           </div>
         </div>
         <div className="w-2/3">
-          <fieldset className="border-l-4 border-t-4 grid grid-cols-2">
-            <legend className="m-auto px-2 text-3xl font-bold">
-              Habilidades
-            </legend>
+          <LinedTitle text="Habilidades" Tag="h3" />
+          <fieldset className=" grid grid-cols-2">
+
 
             <p>algo</p>
             <p>otro</p>
@@ -212,11 +233,10 @@ function CharSheet() {
             <p>algo</p>
             <p>otro</p>
           </fieldset>
-          <div className="border-l-4">
-            <fieldset className=" border-t-4">
-              <legend className="m-auto px-2 text-3xl font-bold">
-                Combate
-              </legend>
+          <div className="">
+            <fieldset className="">
+            <LinedTitle text="Combate" Tag="h3" />
+
               <p>algo</p>
               <p>algo</p>
               <p>algo</p>
@@ -227,20 +247,21 @@ function CharSheet() {
       </section>
       <section className="flex">
         <div className="w-1/3">
-          <fieldset className="border-t-4">
-            <legend className="m-auto px-2 text-3xl font-bold">
-              Armaduras
-            </legend>
+          <fieldset className="">
+          <LinedTitle text="Armaduras" Tag="h3" />
+
           </fieldset>
         </div>
         <div className="border-l-4 w-1/3">
-          <fieldset className="border-t-4">
-            <legend className="m-auto px-2 text-3xl font-bold">Armas</legend>
+          <fieldset className="">
+          <LinedTitle text="Armas" Tag="h3" />
+
           </fieldset>
         </div>
         <div className="w-1/3">
-          <fieldset className="border-l-4 border-t-4">
-            <legend className="m-auto px-2 text-3xl font-bold">Focos</legend>
+          <fieldset className="">
+          <LinedTitle text="Focos" Tag="h3" />
+
             <p>algo</p>
             <p>algo</p>
             <p>algo</p>
