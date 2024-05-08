@@ -1,4 +1,4 @@
-import CharSheet from "./components/CharSheet";
+import CharSheet from "./components/char-sheet/CharSheet";
 
 function App() {
   return (

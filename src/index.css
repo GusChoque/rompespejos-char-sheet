@@ -18,23 +18,11 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@page {
-  size: A4;
-  margin: 0;
-}
 @media print {
   html,
   body {
-    width: 210mm;
-    height: 297mm;
+    margin: 0;
+    size: A4;
+    padding: 4px;
   }
-  /* ... the rest of the rules ... */
 }
